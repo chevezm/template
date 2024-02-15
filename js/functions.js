@@ -22,3 +22,14 @@ function bubbleSort(array){ //descending sort
     }
     return array;
 }
+
+function round(value, precision = 0){
+    var multiplier = Math.pow(10, precision);
+    return Math.round(value * multiplier) / multiplier;
+}
+
+function count(find, array){
+    let total = 0;
+    for (let elem of array) if (elem === find) total += 1;
+    return total;
+}
