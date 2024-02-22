@@ -23,6 +23,19 @@ function bubbleSort(array){ //descending sort
     return array;
 }
 
+// Durstenfeld Shuffle
+function shuffle(array){
+    for(let i = 0; i < array.length - 1; i++){
+      let rand = randInt(i, array.length - 1);
+      [array[i], array[rand]] = [array[rand], array[i]];
+    }
+}
+
+// Random Intenger Between Min and Max (inclusive)
+function randInt(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 function round(value, precision = 0){
     var multiplier = Math.pow(10, precision);
     return Math.round(value * multiplier) / multiplier;
